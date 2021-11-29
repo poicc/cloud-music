@@ -1,3 +1,7 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "c-playlist":"/components/playlist/playlist"
+  },
+  "enablePullDownRefresh": true,
+  "enablebReachBottom":true
 }

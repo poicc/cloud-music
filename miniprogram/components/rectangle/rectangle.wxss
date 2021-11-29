@@ -1,0 +1,9 @@
+.space{
+  width: 60%;
+  height: 60rpx;
+  border-radius: 7%;
+  background-color: #808A87;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
