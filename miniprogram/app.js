@@ -12,6 +12,12 @@ App({
         env: 'cloud1-4g39q6fn18a20613',
         traceUser: true,
       });
+
+      // wx.cloud.callFunction({
+      //   name:'getPlayList'
+      // }).then((res) => {
+      //   console.log(res)
+      // })
     }
 
     this.globalData = {};

@@ -1,4 +1,6 @@
 // pages/music/music.js
+const MAX_LIMIT = 15
+const db = wx.cloud.database()
 Page({
 
   /**
@@ -36,43 +38,7 @@ Page({
         url: 'http://p1.music.126.net/fKiabCo-mg0Uf6nExhzDVw==/109951166667567149.jpg?imageView&quality=89',
       },
     ],
-    playlist: [{
-        "id": "1001",
-        "playCount": 1.4641238e+06,
-        "name": "来自乐队的炙热|你的冬日取暖指南",
-        "coverImgUrl": "http://p3.music.126.net/lOGNhEuFf_Vbh79igUuigw==/109951166632604474.jpg?param=200y200",
-      },
-      {
-        "id": "1002",
-        "playCount": 1985,
-        "name": "1000首华语乐坛神仙打架8090后经典老歌",
-        "coverImgUrl": "http://p3.music.126.net/S4yl2kffKYOGxXNvLkQlRQ==/109951164186039790.jpg?param=200y200"
-      },
-      {
-        "id": "1003",
-        "playCount": 622822.6,
-        "name": "Dream Pop丨弥漫在云端的七色彩虹",
-        "coverImgUrl": "http://p4.music.126.net/Q2X1WwxQkzHb1EmqNpZuvA==/109951164393546660.jpg?param=200y200"
-      },
-      {
-        "id": "1004",
-        "playCount": 115624,
-        "name": "【旋律控】超级好听的欧美良曲",
-        "coverImgUrl": "http://p4.music.126.net/2MsstS-M9w5-li0aRy3sUQ==/1380986606815861.jpg?param=200y200"
-      },
-      {
-        "id": "1005",
-        "playCount": 495154,
-        "name": "[公路之歌] 在路上 你需要一首公路之歌",
-        "coverImgUrl": "http://p3.music.126.net/Jjl0eotC4wYw8I4haEugIA==/109951166035817995.jpg?param=200y200"
-      },
-      {
-        "id": "1006",
-        "playCount": 510215,
-        "name": "[朋克摇滚] 简单直接的原始呐喊",
-        "coverImgUrl": "http://p3.music.126.net/YM-e7-YiytdERwOvCXxvQg==/109951165623853769.jpg?param=200y200"
-      }
-    ]
+    playlist: []
   },
 
   /**
@@ -93,10 +59,11 @@ Page({
         $url: 'playlist',
       }
     }).then((res) => {
-      console.log(res)
+      console.log(res.result.data)
       this.setData({
         playlist: this.data.playlist.concat(res.result.data)
       })
+
       wx.stopPullDownRefresh()
       wx.hideLoading()
     })
