@@ -8,7 +8,7 @@ cloud.init({
 const TcbRouter = require('tcb-router')
 const axios = require('axios')
 //定义基础URL，修改你自己的穿透地址！！！
-const BASE_URL = 'http://bwx34dp6.dnat.tech:40215'
+const BASE_URL = 'https://5f8d-2409-8920-ab0-80f5-cc7b-e4e0-fb1-c648.ngrok.io'
 // 云函数入口函数
 exports.main = async (event, context) => {
   const app = new TcbRouter({
@@ -31,6 +31,16 @@ exports.main = async (event, context) => {
     console.log('######' + res)
     ctx.body = res.data
   })
-  return app.serve()
+  //根据歌曲id获取歌曲播放的url
+  app.router('musicUrl', async (ctx, next) => {
+    const res = await axios.get(`${BASE_URL}/song/url?id=${event.musicId}`)
+    ctx.body = res.data
+  })
+  //根据歌曲id获取歌词
+  app.router('lyric', async (ctx, next) => {
+    const res = await axios.get(`${BASE_URL}/lyric?id=${event.musicId}`)
+    ctx.body = res.data
+  })
 
+  return app.serve()
 }

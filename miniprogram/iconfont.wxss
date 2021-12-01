@@ -1,0 +1,33 @@
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot?t=1611922885812'); /* IE9 */
+  src: url('iconfont.eot?t=1611922885812#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAOwAAsAAAAACKgAAANkAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDMgqESIQNATYCJAMUCwwABCAFhG0HSBuZB8ieGjuDMbACDcdAo4EkgIZSEtTvxe29d7+kV1WqS3wfH9VdQ0Uh6RYFCjTjERpl0N2I/K9N/SaaQluiZLZ5CzAfSDbrnk4Jt1UB52Qt4hRvBcSVcKV2AMGpZ3ZjVXZdSkqRtIJKkwvht4UCf9yrnHUesPnsW1zmWjS2JhSaQAHau1Yq0QBpRLkwN8QgfkdtGLu8yOcEBq3yMpw1tveDXdLXBeIpHpXAnnBKyVC9pC04muIzWPTlo/EOgE/e78d/CIedoqn0l85fNKhQ/ct/2mUS/4XxKkAMpwc7RcUekMTLQuMTUxDcYzIov8/sCBjUK8qvvPfXP23/tOv/fxTuhsSDxj88ilAl0dLTh8EREuTBsSyEwu/rCMG/7QiVf7vYD+adDRjECL4ZiPWBA6Rq2IeHM/E1wwu451l6gn7mAdUhkfnwB316PB5IOOPgLf7W6yenn++A/iF5VQPEStPFcQs7oQ9KemlDgl7HgPARrv1PMomVfBmcdcj911VT06GDOCP1RGh/7RiJ1QIFXHXQ3ZeVot+HZ01//pjPSnvrWdO5KMf1O7Lb9PiR6Xh7hg4ZmAZvN9cURWpEzYUSRRWgKl6akWbwLxHiwhzPgRNZ8+/fZnjZpUMu9uUc/xG/W2WnXGukt92htyQbWmOXloq7S3qz0Oi4tFQw/dbab9FDkTtr1aJ6jaEhHURvrKj7ie1DlBZU6JH1aHTPF0yKq/+Kv/F9HoGpsfJ7V4KfpYVXvaJnkVA/ALxakcasf4DVsCkVjq5qUiq1mJKpsR9TKnLfIN68ddK7YcQzjdMJvZkIis4KVL01VOL2oDHkAFq9Qxi0q+n0kCmMSeQAdmwFEMadgWLUD6jG3UUl7i00Zn2F1niYYNBF5Fw5ZCPizjqGJY5VJC+guEIzJBru9DN7cXQmJbE4xyMMYqbHPSjkD6YjTTiD2RA79NlomHOCCKNp1Ahew6kURRqjCaxwf4xzrTQQIEVf5FdoGpxOMZiEw1SIbAESp6AyiNObc2Z+vhcWNSNFwirKytSDMEYXnxwJ8Qs2QDUJM43KLuUzullRYRxHIARDpSGNQI+ljCCFaMWLEjAF5xfr4NeUCqB2pKnQP704fY/HYJC+q4kSNTKaaHWvpBOJzUStMiVS55o1hmfNGTzPAQA=') format('woff2'),
+  url('iconfont.woff?t=1611922885812') format('woff'),
+  url('iconfont.ttf?t=1611922885812') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('iconfont.svg?t=1611922885812#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-zanting:before {
+  content: "\e7c7";
+}
+
+.icon-bofang:before {
+  content: "\e615";
+}
+
+.icon-prev:before {
+  content: "\ea87";
+}
+
+.icon-next:before {
+  content: "\ea8a";
+}
+
