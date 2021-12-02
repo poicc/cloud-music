@@ -1,25 +1,52 @@
-.player-container{
+.player-container {
   position: absolute;
   top: 0;
-  bottom:0;
+  bottom: 0;
   left: 0;
   right: 0;
- filter: blur(40rpx);
- opacity: 0.5;
- z-index: -1;
+  filter: blur(40rpx);
+  opacity: 0.5;
+  z-index: -1;
 }
 
-.player-mask{
+.player-mask {
   position: absolute;
   top: 0;
-  bottom:0;
+  bottom: 0;
   left: 0;
   right: 0;
   z-index: -2;
   background-color: #222;
 }
 
-.player-info{
+.player-tab {
+  position: sticky;
+  top: 0;
+  z-index: 99;
+}
+
+.player-flex {
+  height: 150rpx;
+  display: flex;
+  align-items: center;
+  padding: 0 40rpx;
+}
+
+.player-title-conta {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.player-icon {
+  width: 70rpx;
+  height: 70rpx;
+}
+
+.player-title {
+  color: white;
+}
+
+.player-info {
   text-align: center;
   position: absolute;
   top: 0;
@@ -50,17 +77,17 @@
   transition: transform 0.8s ease;
 }
 
-.playing.player-disc::after{
+.playing.player-disc::after {
   transform: rotate(0deg);
 }
 
-.player-img{
+.player-img {
   width: 368rpx;
   height: 368rpx;
   border-radius: 50%;
   position: absolute;
   left: 50%;
-  top:50%;
+  top: 50%;
   margin-top: -184rpx;
   margin-left: -184rpx;
 }
@@ -69,41 +96,45 @@
   position: absolute;
   bottom: 8%;
   left: 50%;
-  transform:translateX(-50%);
+  transform: translateX(-50%);
   display: flex;
   align-items: center;
 }
 
-.control .iconfont{
-  color:#fefefe;
+.control .iconfont {
+  color: #fefefe;
 }
 
-.icon-prev, .icon-next{
+.icon-prev,
+.icon-next {
   font-size: 80rpx;
 }
 
-.icon-bofang, .icon-zanting{
+.icon-bofang,
+.icon-zanting {
   font-size: 120rpx;
   margin: 0 50rpx;
 }
 
-.zhuan{
+.zhuan {
   animation: disc 12s linear infinite;
 }
-@keyframes disc{
-  from{
+
+@keyframes disc {
+  from {
     transform: rotate(0deg);
   }
-  to{
+
+  to {
     transform: rotate(360deg);
   }
 }
 
-.ting{
+.ting {
   animation-play-state: paused;
 }
 
-.progress-bar{
+.progress-bar {
   width: 90%;
   position: absolute;
   left: 50%;

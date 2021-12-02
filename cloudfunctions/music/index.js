@@ -8,7 +8,7 @@ cloud.init({
 const TcbRouter = require('tcb-router')
 const axios = require('axios')
 //定义基础URL，修改你自己的穿透地址！！！
-const BASE_URL = 'https://5f8d-2409-8920-ab0-80f5-cc7b-e4e0-fb1-c648.ngrok.io'
+const BASE_URL = 'http://3609-112-2-253-140.ngrok.io'
 // 云函数入口函数
 exports.main = async (event, context) => {
   const app = new TcbRouter({

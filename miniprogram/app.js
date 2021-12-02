@@ -20,6 +20,15 @@ App({
       // })
     }
 
-    this.globalData = {};
+    //获取顶部状态栏高度
+    wx.getSystemInfo({
+      success: (res) => {
+        console.log(this.globalData)
+        this.globalData.statusBarHeight = res.statusBarHeight
+      },
+    })
+  },
+  globalData : {
+    statusBarHeight:''
   }
 });

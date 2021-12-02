@@ -4,13 +4,23 @@
 <view class="player-mask"></view>
 
 <view class="player-info">
+  <!-- 自定义顶部 -->
+  <!-- <view class="player-tab"> -->
+  <view class="player-flex" style="margin-top: {{statusBarHeight}}rpx;">
+    <image bindtap="backPre" class="player-icon" src="../../images/other/bottom.png" />
+    <view class="player-title-conta">
+      <view class="player-title">{{title}}</view>
+      <view class="player-title">{{singer}}</view>
+    </view>
+  </view>
+  <!-- </view> -->
   <!--封面信息-->
   <view class="player-disc {{isPlaying?'playing':''}}" hidden="{{isLyricShow}}" bind:tap="onLyricShow">
     <image class="player-img zhuan {{isPlaying?'':'ting'}}" src="{{picUrl}}"></image>
   </view>
   <!--控制面板-->
   <view class="control">
-    <text class="iconfont icon-prev" bindtap="onPrev"></text>
+    <text class="iconfont icon-prev" bind:tap="onPrev"></text>
     <text class="iconfont {{isPlaying?'icon-zanting':'icon-bofang'}}" bindtap="togglePlaying"></text>
     <text class="iconfont icon-next" bindtap="onNext"></text>
   </view>
@@ -18,7 +28,7 @@
 
 <!--进度条-->
 <view class="progress-bar">
-  <c-progress-bar bind:musicEnd="onNext" bind:timeUpdate="timeUpdate"/>
+  <c-progress-bar bind:musicEnd="onNext" bind:timeUpdate="timeUpdate" />
 </view>
 
 <!--歌词-->

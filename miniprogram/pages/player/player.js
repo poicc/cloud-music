@@ -3,6 +3,7 @@ let musiclist = []
 //正在播放的歌曲index
 let playingIndex = 0
 const backgroundAudioManager = wx.getBackgroundAudioManager()
+const statusBarHeight = getApp().globalData.statusBarHeight
 Page({
 
   /**
@@ -10,9 +11,12 @@ Page({
    */
   data: {
     picUrl: '',
+    title: '',
+    singer: '',
     isPlaying: false,
     isLyricShow: false,
     lyric: '歌词',
+    statusBarHeight: ''
   },
 
   /**
@@ -27,12 +31,13 @@ Page({
   _loadMusicDetail(musicId) {
     let music = musiclist[playingIndex]
     console.log(music)
-    wx.setNavigationBarTitle({
-      title: music.name,
-    })
     this.setData({
+      statusBarHeight,
+      title: music.name,
+      singer: music.ar[0].name,
       picUrl: music.al.picUrl
     })
+
     wx.cloud.callFunction({
       name: 'music',
       data: {
@@ -81,7 +86,11 @@ Page({
       })
     })
   },
-
+  backPre() {
+    wx.navigateBack({
+      delta: 1,
+    })
+  },
   togglePlaying() {
     if (this.data.isPlaying) {
       backgroundAudioManager.pause()
