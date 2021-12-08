@@ -1,0 +1,7 @@
+<view class="color">
+  <view style="width: 750rpx;height: {{statusBarHeight}}px;"></view>
+  <view class="player-flex">
+    <image wx:if="{{showIcon}}" bindtap="backPre" class="player-icon" src="../../images/other/return.png" />
+    <view class="player-title">{{title}}</view>
+  </view>
+</view>

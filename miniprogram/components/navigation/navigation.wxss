@@ -1,0 +1,22 @@
+/* components/navigation.wxss */
+.color {
+  background-image: linear-gradient(to right,#777dda,#4e96a7);
+}
+.player-flex {
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.player-icon {
+  width: 50rpx;
+  height: 50rpx;
+  position: absolute;
+  left: 10rpx;
+  margin-top: 10rpx;
+}
+
+.player-title {
+  color: white;
+}

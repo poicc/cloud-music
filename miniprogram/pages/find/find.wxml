@@ -1,2 +1,25 @@
-<!--pages/find/find.wxml-->
-<text>pages/find/find.wxml</text>
+<!-- 自定义导航 -->
+<navigation showIcon="{{false}}" title='发现'></navigation>
+<!-- 顶部搜索区 -->
+<view class="header">
+  <view class="left" bind:tap="onPushlish">
+    <!-- 左侧的发布图标 -->
+    <image class="icon" src="../../images/other/put.png" />
+  </view>
+  <view class="right">
+    <c-search bindsearch="onSearch" />
+  </view>
+</view>
+
+<!-- 博客卡片详情 -->
+<scroll-view class="container">
+  <block wx:for="{{blogList}}" wx:key="_id">
+    <view class="blog-panel">
+      <c-blog-card blog="{{item}}" data-blogid="{{item._id}}" bind:tap="goDetail" />
+      <!-- <c-blog-ctrl blogId="{{item._id}}" blog="{{item}}"></c-blog-ctrl> -->
+    </view>
+  </block>
+</scroll-view>
+
+<!-- 底部弹出层 -->
+<c-login modalShow="{{modalShow}}" bind:loginsuccess="onLoginSuccess" bind:loginfail="onLoginFail" />

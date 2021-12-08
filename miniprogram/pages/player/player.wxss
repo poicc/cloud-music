@@ -19,16 +19,12 @@
   background-color: #222;
 }
 
-.player-tab {
-  position: sticky;
-  top: 0;
-  z-index: 99;
-}
 
 .player-flex {
   height: 150rpx;
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 0 40rpx;
 }
 

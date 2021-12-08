@@ -1,4 +1,5 @@
 // app.js
+let formatTime = require('./utils/formatTime.js')
 App({
   onLaunch: function () {
     if (!wx.cloud) {
@@ -29,6 +30,7 @@ App({
     })
   },
   globalData : {
+    formatTime,
     statusBarHeight:''
   }
 });

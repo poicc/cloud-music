@@ -1,1 +1,29 @@
 /* pages/find/find.wxss */
+page {
+  background-color: #f6f6f6;
+}
+.icon {
+  width: 50rpx;
+  height: 50rpx;
+}
+.left {
+  width: 10%;
+}
+.right {
+  width: 90%;
+}
+.header {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 20rpx;
+}
+
+.container {
+  margin-top: 20rpx;
+  padding: 10rpx 10rpx 10rpx 0;
+}
+
+.blog-panel {
+  margin-bottom: 20rpx;
+}
