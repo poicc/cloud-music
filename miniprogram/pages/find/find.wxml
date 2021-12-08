@@ -16,7 +16,7 @@
   <block wx:for="{{blogList}}" wx:key="_id">
     <view class="blog-panel">
       <c-blog-card blog="{{item}}" data-blogid="{{item._id}}" bind:tap="goDetail" />
-      <!-- <c-blog-ctrl blogId="{{item._id}}" blog="{{item}}"></c-blog-ctrl> -->
+      <c-blog-ctrl blogId="{{item._id}}" blog="{{item}}"></c-blog-ctrl>
     </view>
   </block>
 </scroll-view>

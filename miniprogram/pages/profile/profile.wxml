@@ -1,2 +1,31 @@
 <!--pages/profile/profile.wxml-->
-<text>pages/profile/profile.wxml</text>
+<view class="profile-header">
+  <view>
+    <!-- 使用open-data来获得头像和昵称 -->
+    <!-- <open-data type="userAvatarUrl"></open-data> -->
+    <image class="avatar" src="https://cdn.jsdelivr.net/gh/1802343228/image@main/avatar.3sylmzwhoqi0.png" />
+  </view>
+  <open-data type="userNickName" class="nickname"></open-data>
+</view>
+
+<view class="nav">
+  <view class="nav-item">
+    <!-- navigator可以方便地实现页面跳转，这里把hover-class置为none，去掉点击变灰地效果 -->
+    <navigator class="content" hover-class="none" url="/pages/play-history/play-history">
+      <text class="text">最近播放</text>
+      <i class="iconfont icon-iconfontyoujiantou"></i>
+    </navigator>
+  </view>
+  <view class="nav-item">
+    <navigator class="content" hover-class="none" url="/pages/profile-blog/profile-blog">
+      <text class="text">我的博客</text>
+      <i class="iconfont icon-iconfontyoujiantou"></i>
+    </navigator>
+  </view>
+  <view class="nav-item">
+    <view class="content" bind:tap="onTapQrCode">
+      <text class="text">小程序码</text>
+      <i class="iconfont icon-iconfontyoujiantou"></i>
+    </view>
+  </view>
+</view>

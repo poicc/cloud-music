@@ -18,9 +18,9 @@
   </view>
   <!--控制面板-->
   <view class="control">
-    <text class="iconfont icon-prev" bind:tap="onPrev"></text>
-    <text class="iconfont {{isPlaying?'icon-zanting':'icon-bofang'}}" bindtap="togglePlaying"></text>
-    <text class="iconfont icon-next" bindtap="onNext"></text>
+    <text class="iconfont icon-shangyishou" style="font-size: 30px;" bind:tap="onPrev"></text>
+    <text class="iconfont {{isPlaying?'icon-zanting':'icon-bofang'}}" bind:tap="togglePlaying"></text>
+    <text class="iconfont icon-xiayishou" style="font-size: 30px;" bind:tap="onNext"></text>
   </view>
 </view>
 

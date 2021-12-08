@@ -1,4 +1,6 @@
 <!--pages/music/music.wxml-->
+<!-- 自定义导航 -->
+<navigation showIcon="{{false}}" title='云音乐'></navigation>
 <swiper indicator-dots="true" indicator-active-color="#d43c33" autoplay="true" interval="3000" duration="1000"
   class="swiper">
   <swiper-item wx:for="{{imgUrls}}">

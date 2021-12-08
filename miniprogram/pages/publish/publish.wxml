@@ -1,6 +1,6 @@
 <!--pages/publish/publish.wxml-->
 <navigation showIcon="{{true}}" title='发现'></navigation>
-<view class="container">
+<view class="container1">
   <textarea class="content" placeholder="分享新鲜事..." bindinput="onInput" maxlength="140" auto-focus bindfocus="onFocus"
     bindblur="onBlur"></textarea>
 

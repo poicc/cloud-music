@@ -28,8 +28,9 @@ Page({
     //根据是否具有scope,userInfo属性，判断用户是否授权
     wx.getSetting({
       success: (res) => {
+
         console.log('当前设置' + JSON.stringify(res))
-        if (res.authSetting['scope.userInfo']) {
+        if (!res.authSetting['scope.userInfo']) {
           wx.getUserProfile({
             desc: '用于展示用户信息',
             success: (res) => {
@@ -51,6 +52,7 @@ Page({
     console.log('>>>>>' + event)
     const detail = event.detail
     console.log(detail)
+    detail.avatarUrl = 'https://cdn.jsdelivr.net/gh/1802343228/image@main/avatar.3sylmzwhoqi0.png';
     wx.navigateTo({
       url: `../publish/publish?nickname=${detail.nickName}&avatarUrl=${detail.avatarUrl}`,
     })

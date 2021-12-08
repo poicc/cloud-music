@@ -20,6 +20,7 @@ App({
       //   console.log(res)
       // })
     }
+    this.getOpenid();
 
     //获取顶部状态栏高度
     wx.getSystemInfo({
@@ -27,6 +28,17 @@ App({
         console.log(this.globalData)
         this.globalData.statusBarHeight = res.statusBarHeight
       },
+    })
+  },
+  getOpenid() {
+    wx.cloud.callFunction({
+      name: 'login'
+    }).then((res) => {
+      const openid = res.result.openid
+      this.globalData.openid = openid
+      if(wx.getStorageSync(openid) == '') {
+        wx.setStorageSync(openid, [])
+      }
     })
   },
   globalData : {

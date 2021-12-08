@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "c-blog-card": "/components/blog-card/blog-card",
+    "c-blog-ctrl": "/components/blog-ctrl/blog-ctrl",
+    "navigation":"/components/navigation/navigation"
+  },
+  "navigationStyle":"custom"
+}

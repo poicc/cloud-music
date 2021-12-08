@@ -1,0 +1,30 @@
+<!-- 自定义导航 -->
+<navigation title='详情' showIcon="{{true}}"></navigation>
+<scroll-view scroll-y class="container" style="top:{{statusBarHeight*2+100}}rpx;">
+  <!-- 顶部博客卡片 -->
+  <view class="blog-card">
+    <c-blog-card blog="{{blog}}"></c-blog-card>
+  </view>
+  <view class="tab">评论列表</view>
+  <!-- 评论列表内容 -->
+  <view class="comment-list">
+    <!-- 遍历博客的评论数组 -->
+    <block wx:for="{{commentList}}" wx:key="_id">
+      <view class="comment">
+        <!-- 评论人头像和昵称 -->
+        <view class="comment-title">
+          <image class="comment-avatar" src="{{item.avatarUrl}}" />
+          <text class="comment-nickname">{{item.nickName}}</text>
+        </view>
+        <!-- 评论内容 -->
+        <view class="comment-content">{{item.content}}</view>
+        <!-- 评论时间 -->
+        <view class="comment-time">{{item.createTime}}</view>
+      </view>
+    </block>
+  </view>
+</scroll-view>
+<!-- 底部操作条 -->
+<view class="blog-ctrl">
+  <c-blog-ctrl blogId="{{blog._id}}" bind:refreshCommentList="_getBlogDetail" />
+</view>

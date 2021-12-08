@@ -1,33 +1,29 @@
-// components/search/search.js
 let keyword = ''
 Component({
-  properties: {
-    placeholder: {
-      type: String,
-      value: '请输入关键字'
-    }
-  },
-
-  /**
-   * 页面的初始数据
-   */
-  data: {
-    inputValue: ''
-  },
-
-  methods: {
-    onInput(event) {
-      keyword = event.detail.value
+    properties: {
+        placeholder: {
+            type: String,
+            value: '请输入关键字'
+        },
     },
-    onFocus() {
-      this.setData({
-        inputValue: ''
-      })
+    data: {
+        inputValue: '',
     },
-    onSearch() {
-      this.triggerEvent('search', {
-        keyword
-      })
-    }
-  },
+    methods: {
+        onInput(event) {
+            keyword = event.detail.value
+        },
+        onFocus(event) {
+            this.setData({
+                inputValue: '',
+            })
+            keyword = ''
+        },
+        onSearch() {
+            console.log(keyword)
+            this.triggerEvent('search', {
+                keyword,
+            })
+        },
+    },
 })

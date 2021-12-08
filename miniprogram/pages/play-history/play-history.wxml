@@ -1,0 +1,6 @@
+<!--pages/play-history/play-history.wxml-->
+<!-- 自定义导航 -->
+<navigation showIcon="{{true}}" title='最近播放'></navigation>
+<view>
+  <c-musiclist musiclist="{{musiclist}}" />
+</view>

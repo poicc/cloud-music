@@ -1,5 +1,7 @@
 {
   "usingComponents": {
+    "navigation":"/components/navigation/navigation",
     "c-musiclist": "/components/musiclist/musiclist"
-  }
+  },
+  "navigationStyle":"custom"
 }

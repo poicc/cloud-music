@@ -1,4 +1,5 @@
 // pages/musiclist/musiclist.js
+const app = getApp()
 Page({
 
   /**
@@ -9,6 +10,7 @@ Page({
     musiclist: [],
     //歌单信息（只取了封面图和歌单名称）
     listInfo:{},
+    statusBarHeight: app.globalData.statusBarHeight,
   },
 
   /**

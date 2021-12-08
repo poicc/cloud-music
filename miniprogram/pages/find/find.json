@@ -3,7 +3,8 @@
     "c-search": "/components/search/search",
     "navigation":"/components/navigation/navigation",
     "c-login": "/components/login/login",
-    "c-blog-card": "/components/blog-card/blog-card"
+    "c-blog-card": "/components/blog-card/blog-card",
+    "c-blog-ctrl": "/components/blog-ctrl/blog-ctrl"
   },
   "navigationStyle":"custom"
 }

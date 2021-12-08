@@ -1,6 +1,8 @@
 {
   "usingComponents": {
+    "navigation":"/components/navigation/navigation",
     "c-playlist":"/components/playlist/playlist"
   },
-  "enablePullDownRefresh": true
+  "enablePullDownRefresh": true,
+  "navigationStyle":"custom"
 }
